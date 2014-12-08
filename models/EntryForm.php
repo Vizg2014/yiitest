@@ -17,8 +17,8 @@ class EntryForm extends model
 	public function rules()
 	{
 		return [
-			[[$name, $email], 'required'],
-			[$name, $email]
+			[['name', 'email'], 'required'],
+			['email', 'email'],
 		];
 	}
 }
@@ -28,8 +28,8 @@ $model = new EntryForm();
 $model->name = 'Djon';
 $model->email = 'drbolik@gmail.com';
 
-if($model->validate($model->rules())){
-	return true;
+if($model->validate()){
+
 }else{
 	$model->getErrors();
 }
