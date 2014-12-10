@@ -1,0 +1,52 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+
+<div class="col-md-9 productBloc " >
+	<div class="viewProduct" >
+		<img class="ImgProduct img-responsive" src="/img/{{ object.picture }}.png" alt="droduct" />
+	</div>
+	<div class="col-md-5 productOpisanie">
+		<p class="titleObject" >{{ object.titl }} </p>
+		<div class="separatorLineProduct">	</div>
+		<p class="propertieseObject">Производитель: {{ object.titl }} <br> {{ object.model }}B <br> Наличие: <strong>{{ object.availability}} </strong></p>
+
+		<div class="separatorLineProduct"></div>
+
+		<div class="buttonProduct">
+			<p class="priceBuy">{{ object.price }}р.</p>
+			<div class="buttonBlock">
+				<button class="btn"><p><a href="#">Купить</a></p></button>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+<div class="col-md-9 reviews">
+
+	<button class="btn"><a href="#">Описание</a></button>&nbsp<button class="btn"><a  href="#">Отзивы</a> </button>
+
+	<p>Полностью собранное шасси, установленный двигатель Kyosho G20 Stock, электронный <br> регулятор скорости PERFEX KA-15, микроприёмник PERFEX KR-6, сервомашинку  PERFEX KS-101BK,<br> покрашенный корпус с наклейками, двухканальный передатчик Perfex/Futaba KT-6, инструкцию, трубочку <br>для антенны приёмника, крестовой/колёсный ключ.</p>
+	<h4>Спецификации:</h4>
+	<p>Длина: 380 мм.<br>
+		Ширина: 248 мм.<br>
+		Высота: 145 мм.<br>
+		Клиренс: 24 мм.<br>
+		Длина колесной базы: 270 мм.<br>
+		Колея (передняя/задняя): 176/176 мм.<br>
+		Ширина колёс (перед/зад): 34/42мм.<br>
+		Передаточное число: 8.125:1.<br>
+		Вес (приблизительно): 1650 г.<br>
+	<h4>Комплект требует:</h4>
+	Восемь батареек или аккумуляторов типа АА для передатчика<br>
+	Силовой аккумулятор с разъемом Tamiya на 7.2V NI-MH (не менее 1200mAh)<br>
+	Зарядное устройство для силового аккумулятора<br>
+	Важно: некоторые универсальные зарядные устройства "питаются" от 11-18V поэтому для работы от сети (220V) потребуется соответствующий адаптер.<br>
+</div>
+
+{% endblock %}

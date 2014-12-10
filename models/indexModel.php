@@ -9,14 +9,20 @@
 namespace app\models;
 use yii\db\ActiveRecord;
 
-class userTab  extends  ActiveRecord
+/**
+ * Class userTab
+ * @package app\models
+ */
+class indexModel  extends  ActiveRecord
 {
+
+
 	/**
 	 * @return string
 	 */
 	public static  function tableName()
 	{
-		return 'user';
+		return 'news';
 	}
 
 }

@@ -57,15 +57,15 @@
 
 	<div class="obzor col-md-9">
 		<p><i class="glyphicon glyphicon-bell"></i> Последние обзоры</p>
-		{% for new in var %}
-		{% include 'obzor.html.twig' with {"new": new} %}
+		{% for new in model %}
+		{% include 'obzor.twig' with {"new": new} %}
 		{% endfor %}
 	</div>
-	{% for about in bor %}
+	{% for about in model %}
 		<div class="O_compani col-md-9">
 			<h2>{{ about.title }}</h2>
 
-			<p class="review_text">{{ about.text }} <a href="#">читать дальше</a>
+			<p class="review_text">{{ about.news }} <a href="#">читать дальше</a>
 			</p>
 		</div>
 	{% endfor %}
