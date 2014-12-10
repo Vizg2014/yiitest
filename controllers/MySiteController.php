@@ -10,6 +10,7 @@ namespace app\controllers;
 use Yii;
 use yii\web\Controller;
 use app\models\indexModel;
+use app\models\newsModel;
 
 class MySiteController extends Controller  {
 		/**
@@ -22,9 +23,10 @@ class MySiteController extends Controller  {
 	 */
 	public function actionIndex()
 	{
-		$model = indexModel::find()->all();
-		var_dump($model);
-		return $this->render("index.twig",['model'=>$model]);
+		$news = new newsModel;
+		$news = indexModel::find()->all();
+		var_dump($news);
+		return $this->render("index.twig",['model'=>$news]);
 
 	}
 

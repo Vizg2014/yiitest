@@ -9,6 +9,14 @@
 namespace app\controllers;
 
 
-class ProductController {
+use yii\base\Controller;
+use app\models\product
+class ProductController extends Controller {
+
+	function actionCatalog()
+	{
+		$modelCatalog = new
+	}
+
 
 } 
