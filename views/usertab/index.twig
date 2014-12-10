@@ -1,0 +1,72 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+
+	<div class="sales col-md-9">
+		<p><a id="informe_sales">Распродажа</a></p>
+
+
+		<div class="sales1 col-md-4">
+			<div class="price"><p>18480</p></div>
+			<div id="opisanie"><a href="http://testphp/index.php/product/car">CYCLONE D4 WORLD CHAMPIONSHIP EDITION
+					KIT</a></div>
+		</div>
+		<div class="sales2 col-md-4">
+			<div class="price2"><p>5712р</p></div>
+			<div id="opisanie2"><a href="#">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+		<div class="sales3 col-md-4">
+			<div class="price3"><p>18240р</p></div>
+			<div id="opisanie3"><a href="#">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+	</div>
+
+
+	<div class="hit_sales col-md-9">
+		<p><a id="informe_sales1">Хиты продаж</a></p>
+
+		<div class="sales1 col-md-4">
+			<div class="price"><p>18480р</p></div>
+			<div id="opisanie"><a href="756">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+
+		<div class="sales2 col-md-4">
+			<div class="price2"><p>5712р</p></div>
+			<div id="opisanie2"><a href="325">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+		<div class="sales3 col-md-4">
+			<div class="price3"><p>18240р</p></div>
+			<div id="opisanie3"><a href="450">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+
+		<div class="sales1 col-md-4">
+			<div class="price"><p>18480р</p></div>
+			<div id="opisanie"><a href="800">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+
+		<div class="sales2 col-md-4">
+			<div class="price2"><p>5712р</p></div>
+			<div id="opisanie2"><a href="900">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+		<div class="sales3 col-md-4">
+			<div class="price3"><p>18240р</p></div>
+			<div id="opisanie3"><a href="300">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		</div>
+	</div>
+
+	<div class="obzor col-md-9">
+		<p><i class="glyphicon glyphicon-bell"></i> Последние обзоры</p>
+		{% for new in var %}
+		{% include 'obzor.html.twig' with {"new": new} %}
+		{% endfor %}
+	</div>
+	{% for about in bor %}
+		<div class="O_compani col-md-9">
+			<h2>{{ about.title }}</h2>
+
+			<p class="review_text">{{ about.text }} <a href="#">читать дальше</a>
+			</p>
+		</div>
+	{% endfor %}
+{% endblock %}
