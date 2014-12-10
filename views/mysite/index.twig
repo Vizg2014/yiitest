@@ -1,4 +1,4 @@
-{% extends "layout.twig" %}
+{% extends "../layout.twig" %}
 
 {% block content %}
 
@@ -61,12 +61,4 @@
 		{% include 'obzor.twig' with {"new": new} %}
 		{% endfor %}
 	</div>
-	{% for about in model %}
-		<div class="O_compani col-md-9">
-			<h2>{{ about.title }}</h2>
-
-			<p class="review_text">{{ about.news }} <a href="#">читать дальше</a>
-			</p>
-		</div>
-	{% endfor %}
 {% endblock %}

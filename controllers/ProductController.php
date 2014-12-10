@@ -8,14 +8,22 @@
 
 namespace app\controllers;
 
-
-use yii\base\Controller;
-use app\models\product
+use Yii;
+use yii\web\Controller;
+use app\models\product;
 class ProductController extends Controller {
 
 	function actionCatalog()
 	{
-		$modelCatalog = new
+		$modelCatalog = new product();
+		$response = $modelCatalog->find()->all();
+
+//		$pagination = new Pagination(['
+//			defaultPageSize'=>16,
+//			'totalCount' => $modelCatalog->count()
+//		]);
+			return $this->render('catalog.twig',[]);
+
 	}
 
 

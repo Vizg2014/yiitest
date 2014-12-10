@@ -9,6 +9,12 @@
 namespace app\models;
 
 
-class Product {
+use yii\db\ActiveRecord;
 
+class Product extends ActiveRecord
+{
+	public static  function tableName()
+	{
+		return 'productCatalog';
+	}
 } 

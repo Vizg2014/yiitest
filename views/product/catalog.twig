@@ -1,0 +1,21 @@
+{% extends "@app/views/layout.twig" %}
+
+{% block content %}
+
+<div  class="sales col-md-9">
+	<p><a id="informe_sales">Каталог</a></p>
+	{% for catalog in catalog %}
+	<div style="background: url(/img/{{ catalog.picture }}.png) no-repeat;" class="sales3 col-md-4">
+		<div class="price3"><p> {{catalog.price}} </p></div>
+		<div id="opisanie3"><a href="/index.php/object/{{catalog.id}}">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+	</div>
+	{% endfor %}
+</div>
+	<ul class="pagination pagination pagination-sm">
+	{% for page in range(1, pager) %}
+
+		<li><a  href="?page={{ page }}">{{ page }}</a></li>
+
+	{% endfor %}
+	</ul>
+{% endblock %}
