@@ -15,6 +15,7 @@ $config = [
 					'options' => [
 						'auto_reload' => true,
 					],
+					'uses' => ['yii\widgets\LinkPager']
 
 				],
 			],

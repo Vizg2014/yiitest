@@ -11,18 +11,28 @@ namespace app\controllers;
 use Yii;
 use yii\web\Controller;
 use app\models\product;
-class ProductController extends Controller {
+use yii\data\Pagination;
+
+class ProductController extends Controller  {
 
 	function actionCatalog()
 	{
-		$modelCatalog = new product();
-		$response = $modelCatalog->find()->all();
+		$modelCatalog = product::find();
+		$pagination = new Pagination([
+			'defaultPageSize' => 9,
+			'totalCount' => $modelCatalog->count()
+		]);
 
-//		$pagination = new Pagination(['
-//			defaultPageSize'=>16,
-//			'totalCount' => $modelCatalog->count()
-//		]);
-			return $this->render('catalog.twig',[]);
+		$countries = $modelCatalog
+			->offset($pagination->offset)
+			->limit($pagination->limit)
+			->all();
+
+		return $this->render('catalog.twig',[
+			'pagination'=>$pagination,
+			'catalog'=>$countries
+		]);
+
 
 	}
 
