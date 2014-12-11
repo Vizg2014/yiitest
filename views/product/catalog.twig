@@ -2,16 +2,12 @@
 
 {% block content %}
 
-
-	{{ use('yii\helpers\Html') }}
-
-
 	<div  class="sales col-md-9">
 	<p><a id="informe_sales">Каталог</a></p>
 	{% for catalog in catalog %}
 	<div style="background: url(/basic/web/img/{{ catalog.picture }}.png) no-repeat;" class="sales3 col-md-4">
 		<div class="price3"><p> {{catalog.price}} </p></div>
-		<div id="opisanie3"><a href="/index.php/object/{{catalog.id}}">CYCLONE D4 WORLD CHAMPIONSHIP EDITION KIT</a></div>
+		<div id="opisanie3"><a href="{{ url('product/viewproduct', {'id' : catalog.id}) }}">{{ catalog.name }}</a></div>
 	</div>
 	{% endfor %}
 

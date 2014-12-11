@@ -7,6 +7,16 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+		'urlManager' => [
+			'enablePrettyUrl' => true,
+			'showScriptName' => false,
+			'enableStrictParsing' => true,
+			'rules' => [
+				// ...
+			],
+		],
+	],
+
 		'view' => [
 			'renderers' => [
 				'twig' => [
@@ -15,7 +25,7 @@ $config = [
 					'options' => [
 						'auto_reload' => true,
 					],
-					'uses' => ['yii\widgets\LinkPager']
+					'uses' => ['yii\widgets\LinkPager','yii\helpers\Url']
 
 				],
 			],
